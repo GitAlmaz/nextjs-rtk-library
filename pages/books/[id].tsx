@@ -51,11 +51,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-	// params contains the post `id`.
-	// If the route is like /posts/1, then params.id is 1
 	const res = await fetch(`http://localhost:3000/api/books/${params.id}`)
 	const book = await res.json()
-
-	// Pass post data to the page via props
 	return { props: { book } }
 }
