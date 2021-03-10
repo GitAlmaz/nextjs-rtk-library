@@ -15,7 +15,6 @@ export const addBook = createAsyncThunk(
 	'books/addBook',
 	async (data: Book, ThunkAPI) => {
 		try {
-			console.log('work')
 			const { authors } = ThunkAPI.getState() as RootState
 			const author = authors.list.find(
 				(item: Author) => item.key === data.author_key

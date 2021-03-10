@@ -57,7 +57,6 @@ export default function Books() {
 		form
 			.validateFields()
 			.then(values => {
-				console.log(values)
 				const book: Book = {
 					key: uuidv4(),
 					...values
@@ -81,10 +80,6 @@ export default function Books() {
 
 	const removeHandler = (value: Book) => {
 		dispatch(removeBook(value))
-	}
-
-	const cellClickHandler = value => {
-		console.log(value)
 	}
 	useEffect(() => {
 		dispatch(getBooks())
@@ -151,7 +146,6 @@ export default function Books() {
 				loading={loading}
 				onEditSave={editSaveHandler}
 				onRemove={removeHandler}
-				onCellClick={cellClickHandler}
 			/>
 		</>
 	)

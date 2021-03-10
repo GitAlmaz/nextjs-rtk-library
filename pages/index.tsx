@@ -21,7 +21,7 @@ export default function Home() {
 							/>
 						}
 					>
-						<Meta title='Europe Street beat' />
+						<Meta title='Books' />
 					</Card>
 					<Card
 						hoverable
@@ -35,7 +35,7 @@ export default function Home() {
 							/>
 						}
 					>
-						<Meta title='Europe Street beat' />
+						<Meta title='Authors' />
 					</Card>
 				</Space>
 			</div>

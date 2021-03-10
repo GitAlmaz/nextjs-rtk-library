@@ -120,7 +120,6 @@ const EditableTable = ({
 					...item,
 					...row
 				})
-				console.log(row)
 				setData(newData)
 				onEditSave({
 					...item,
@@ -135,10 +134,6 @@ const EditableTable = ({
 		} catch (errInfo) {
 			console.log('Validate Failed:', errInfo)
 		}
-	}
-
-	const cellClickHandler = (e, record) => {
-		onCellClick(record)
 	}
 
 	const columns = [
