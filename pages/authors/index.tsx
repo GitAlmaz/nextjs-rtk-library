@@ -12,6 +12,7 @@ import {
 	removeUser
 } from '../../store/authors/authorsSlice'
 import { v4 as uuidv4 } from 'uuid'
+import Link from 'next/link'
 
 export default function Authors() {
 	const dispatch = useHookDispatch()
@@ -30,7 +31,10 @@ export default function Authors() {
 			dataIndex: 'last_name',
 			width: '40%',
 			editable: true,
-			inputType: 'text'
+			inputType: 'text',
+			render: (_, record) => {
+				return <Link href={`/authors/${record.key}`}>{record.last_name}</Link>
+			}
 		},
 		{
 			title: 'First name',

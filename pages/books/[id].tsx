@@ -1,10 +1,7 @@
 import { Descriptions, PageHeader, Skeleton } from 'antd'
-import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
-import { useHookDispatch, useHookSelector } from '../../hooks/hooks'
+import React from 'react'
+import { useHookSelector } from '../../hooks/hooks'
 import { RootState } from '../../store'
-import { getUserById, getUsers } from '../../store/authors/authorsSlice'
-import { getBookById } from '../../store/books/booksSlice'
 
 export default function Books({ book: newBook }) {
 	const loading = useHookSelector((state: RootState) => state.books.loading)
